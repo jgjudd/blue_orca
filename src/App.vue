@@ -1,6 +1,9 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header class="header">
+    <img alt="Blue Orca logo" src="./assets/Orca_Updated_Logo.png" id='logo'>
+  </header>
+  
+  <HelloWorld msg="Welcome to Blue Orca"/>
 </template>
 
 <script>
@@ -21,6 +24,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#logo {
+  max-width: 3rem;
+}
+
+.header {
+  display: flex;
 }
 </style>
