@@ -4,17 +4,19 @@
   </header>
   
   <HelloWorld msg="Welcome to Blue Orca"/>
-
+  <Inflation />
 
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Inflation from './components/Inflation.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Inflation
   }
 }
 </script>
