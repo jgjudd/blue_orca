@@ -4,6 +4,8 @@
   </header>
   
   <HelloWorld msg="Welcome to Blue Orca"/>
+
+
 </template>
 
 <script>
@@ -33,4 +35,11 @@ export default {
 .header {
   display: flex;
 }
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }  
+}
+
 </style>
