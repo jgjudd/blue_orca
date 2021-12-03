@@ -1,22 +1,23 @@
 <template>
-  <header class="header">
-    <img alt="Blue Orca logo" src="./assets/Orca_Updated_Logo.png" id='logo'>
-  </header>
-  
-  <HelloWorld msg="Welcome to Blue Orca"/>
-  <Inflation />
-
+  <div id="nav">
+    <div>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <div>
+      <SymbolSearch />
+    </div>
+  </div>
+  <router-view/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Inflation from './components/Inflation.vue'
+import SymbolSearch from '@/components/SymbolSearch.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Inflation
+    SymbolSearch
   }
 }
 </script>
@@ -30,18 +31,18 @@ export default {
   color: #2c3e50;
 }
 
-#logo {
-  max-width: 3rem;
-}
-
-.header {
+#nav {
+  padding: 30px;
   display: flex;
+  justify-content: space-between;
 }
 
-@media (max-width: 600px) {
-  .header {
-    justify-content: center;
-  }  
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
