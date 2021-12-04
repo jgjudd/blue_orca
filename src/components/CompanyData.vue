@@ -6,56 +6,80 @@
     </div>
     <div v-if="Object.keys(company).length !== 0">
         <h2>{{ company.Name }} - {{ company.Symbol }}</h2>
+        <p>{{ company.Address }}</p>
         <div id="company-header">
             <label>Company Description:</label>
             <p>{{ company.Description }}</p>
-            <label>Asset Type:</label>
-            <p>{{ company.AssetType }}</p>
         </div>
+        <h4>Company Info</h4>
         <div id="company-info-wrapper">
-            <p>CIK: {{ company.CIK }}</p>
-            <p>Exchange: {{ company.Exchange }}</p>
-            <p>Currency: {{ company.Currency }}</p>
-            <p>Country: {{ company.Country }}</p>
-            <p>Sector: {{ company.Sector }}</p>
-            <p>Industry: {{ company.Industry }}</p>
-            <p>Address: {{ company.Address }}</p>
-            <p>Fiscal Year End: {{ company.FiscalYearEnd }}</p>
-            <p>Latest Quarter: {{ company.LatestQuarter }}</p>
-            <p>Market Capitalization: {{ company.MarketCapitalization }}</p>
-            <p>EBITDA: {{ company.EBITDA }}</p>
-            <p>PE Ration: {{ company.PERatio }}</p>
-            <p>PEG Ratio: {{ company.PEGRatio }}</p>
-            <p>Book Value: {{ company.BookValue }}</p>
-            <p>Dividend Per Share: {{ company.DividendPerShare }}</p>
-            <p>Dividend Yield: {{ company.DividendYield }}</p>
-            <p>EPS: {{ company.EPS }}</p>
-            <p>Revenue Per Share TTM: {{ company.RevenuePerShareTTM }}</p>
-            <p>Profit Margin: {{ company.ProfitMargin }}</p>
-            <p>Operating Margin TTM: {{ company.OperatingMarginTTM }}</p>
-            <p>Return On Assets TTM: {{ company.ReturnOnAssetsTTM }}</p>
-            <p>Return On Equity TTM: {{ company.ReturnOnEquityTTM }}</p>
-            <p>Revenue TTM: {{ company.RevenueTTM }}</p>
-            <p>Gross Profit TTM: {{ company.GrossProfitTTM }}</p>
-            <p>Return On Equity TTM: {{ company.ReturnOnEquityTTM }}</p>
-            <p>Diluted EPS TTM: {{ company.DilutedEPSTTM }}</p>
-            <p> Quarterly Earnings Growth YOY: {{ company.QuarterlyEarningsGrowthYOY }}</p>
-            <p>Qaurterly Revenue Growth YOY: {{ company.QuarterlyRevenueGrowthYOY }}</p>
-            <p>Analyst Target Price: {{ company.AnalystTargetPrice }}</p>
-            <p>Trailing PE: {{ company.TrailingPE }}</p>
-            <p>Forward PE: {{ company.ForwardPE }}</p>
-            <p>Price To Sales Ratio TTM: {{ company.PriceToSalesRatioTTM }}</p>
-            <p>Price To Book Ratio: {{ company.PriceToBookRatio }}</p>
-            <p>EV To Revenue: {{ company.EVToRevenue }}</p>
-            <p>EV To EBITDA: {{ company.EVToEBITDA }}</p>
-            <p>Beta: {{ company.Beta }}</p>
-            <p>52 Week High: {{ company["52WeekHigh"] }}</p>
-            <p>52 Week Low: {{ company["52WeekLow"] }}</p>
-            <p>50 Day Moving Average: {{ company["50DayMovingAverage"] }}</p>
-            <p>200 Day Moving Average: {{ company["200DayMovingAverage"] }}</p>
-            <p>Shares Outstanding: {{ company.SharesOutstanding }}</p>
-            <p>Dividend Date: {{ company.DividendDate }}</p>
-            <p>Ex Dividend Date: {{ company.ExDividendDate }}</p>
+            <div>
+                <p><span style="font-weight:bold;">Asset Type:</span> {{ company.AssetType }}</p>
+                <p><span style="font-weight:bold;">CIK:</span> {{ company.CIK }}</p>
+                <p><span style="font-weight:bold;">Exchange:</span> {{ company.Exchange }}</p>
+                <p><span style="font-weight:bold;">Currency:</span> {{ company.Currency }}</p>
+                <p><span style="font-weight:bold;">Country:</span> {{ company.Country }}</p>
+                <p><span style="font-weight:bold;">Sector:</span> {{ company.Sector }}</p>
+                <p><span style="font-weight:bold;">Industry:</span> {{ company.Industry }}</p>
+                <p><span style="font-weight:bold;">Fiscal Year End:</span> {{ company.FiscalYearEnd }}</p>
+                <p><span style="font-weight:bold;">Latest Quarter:</span> {{ company.LatestQuarter }}</p>
+                <p><span style="font-weight:bold;">Market Capitalization:</span> {{ company.MarketCapitalization }}</p>
+                <p><span style="font-weight:bold;">EBITDA:</span> {{ company.EBITDA }}</p>
+            </div>
+            <div>
+                <p><span style="font-weight:bold;">PE Ration:</span> {{ company.PERatio }}</p>
+                <p><span style="font-weight:bold;">PEG Ratio:</span> {{ company.PEGRatio }}</p>
+                <p><span style="font-weight:bold;">Book Value:</span> {{ company.BookValue }}</p>
+                <p><span style="font-weight:bold;">Dividend Per Share:</span> {{ company.DividendPerShare }}</p>
+                <p><span style="font-weight:bold;">Dividend Yield:</span> {{ company.DividendYield }}</p>
+                <p><span style="font-weight:bold;">EPS:</span> {{ company.EPS }}</p>
+                <p><span style="font-weight:bold;">Revenue Per Share TTM:</span> {{ company.RevenuePerShareTTM }}</p>
+                <p><span style="font-weight:bold;">Profit Margin:</span> {{ company.ProfitMargin }}</p>
+                <p><span style="font-weight:bold;">Operating Margin TTM:</span> {{ company.OperatingMarginTTM }}</p>
+                <p><span style="font-weight:bold;">Return On Assets TTM:</span> {{ company.ReturnOnAssetsTTM }}</p>
+            </div>
+            <div>
+                <p><span style="font-weight:bold;">Return On Equity TTM:</span> {{ company.ReturnOnEquityTTM }}</p>
+                <p><span style="font-weight:bold;">Revenue TTM:</span> {{ company.RevenueTTM }}</p>
+                <p><span style="font-weight:bold;">Gross Profit TTM:</span> {{ company.GrossProfitTTM }}</p>
+                <p><span style="font-weight:bold;">Return On Equity TTM:</span> {{ company.ReturnOnEquityTTM }}</p>
+                <p><span style="font-weight:bold;">Diluted EPS TTM:</span> {{ company.DilutedEPSTTM }}</p>
+                <p><span style="font-weight:bold;">Quarterly Earnings Growth YOY:</span> {{ company.QuarterlyEarningsGrowthYOY }}</p>
+                <p><span style="font-weight:bold;">Qaurterly Revenue Growth YOY:</span> {{ company.QuarterlyRevenueGrowthYOY }}</p>
+                <p><span style="font-weight:bold;">Target Price:</span> {{ company.AnalystTargetPrice }}</p>
+                <p><span style="font-weight:bold;">Trailing PE:</span> {{ company.TrailingPE }}</p>
+                <p><span style="font-weight:bold;">Forward PE:</span> {{ company.ForwardPE }}</p>
+            </div>
+            <div>
+                <p><span style="font-weight:bold;">Price To Sales Ratio TTM:</span> {{ company.PriceToSalesRatioTTM }}</p>
+                <p><span style="font-weight:bold;">Price To Book Ratio:</span> {{ company.PriceToBookRatio }}</p>
+                <p><span style="font-weight:bold;">EV To Revenue:</span> {{ company.EVToRevenue }}</p>
+                <p><span style="font-weight:bold;">EV To EBITDA:</span> {{ company.EVToEBITDA }}</p>
+                <p><span style="font-weight:bold;">Beta:</span> {{ company.Beta }}</p>
+                <p><span style="font-weight:bold;">52 Week High:</span> {{ company["52WeekHigh"] }}</p>
+                <p><span style="font-weight:bold;">52 Week Low:</span> {{ company["52WeekLow"] }}</p>
+                <p><span style="font-weight:bold;">50 Day Moving Average:</span> {{ company["50DayMovingAverage"] }}</p>
+                <p><span style="font-weight:bold;">200 Day Moving Average:</span> {{ company["200DayMovingAverage"] }}</p>
+                <p><span style="font-weight:bold;">Shares Outstanding:</span> {{ company.SharesOutstanding }}</p>
+                <p><span style="font-weight:bold;">Dividend Date:</span> {{ company.DividendDate }}</p>
+                <p><span style="font-weight:bold;">Ex Dividend Date:</span> {{ company.ExDividendDate }}</p>
+            </div>
+        </div>
+        <div>
+            <h4>Balance Sheets (Per Year)</h4>
+            <table></table>
+        </div>
+        <div>
+            <h4>Cash Flow</h4>
+            <table></table>
+        </div>
+        <div>
+            <h4>Income Statements (Annual)</h4>
+            <table></table>
+        </div>
+        <div>
+            <h4>Income Statements (Quarterly)</h4>
+            <table></table>
         </div>
     </div>
 </template>
@@ -66,17 +90,24 @@ export default {
   data () {
     return {
       companyName: '',
-      company: {}
+      company: {},
+      annualReports: [],
+      quarterlyReports: []
     }
   },
   methods: {
     async pullCompanyData () {
       const term = this.companyName.toUpperCase()
       alert('Company Search Submitted -----> Company: ' + term)
-      const results = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${term}&apikey=16RM7YB3WU85H52Z`)
+      const companyResults = await fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${term}&apikey=16RM7YB3WU85H52Z`)
         .then(res => res.json())
-      this.company = results
-      console.log(this.company.Name)
+      this.company = companyResults
+      const incomeResults = await fetch(`https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol=${term}&apikey=16RM7YB3WU85H52Z`)
+        .then(res => res.json())
+      this.annualReports = incomeResults.annualReports
+      console.log(this.annualReports)
+      this.quarterlyReports = incomeResults.quarterlyReports
+      console.log(this.quarterlyReports)
     }
   }
 }
@@ -86,8 +117,8 @@ export default {
 <style>
     #company-info-wrapper {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
     }
     #company-header {
         text-align: left;
